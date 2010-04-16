@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+
+ <ListView
+    android:id="@+id/android:list"
+    android:layout_width="fill_parent"
+    android:layout_height="370dp"
+    android:background="#fcfcf9"
+    android:divider="@drawable/black_white_divider"
+    android:dividerHeight="1px"
+    android:cacheColorHint="#fcfcf9"
+    >
+</ListView>
+
+
+
+ <SlidingDrawer
+     android:id="@+id/drawer"
+     android:layout_width="fill_parent"
+     android:layout_height="400dp"
+     android:gravity="bottom"
+     android:allowSingleTap="false"
+     android:topOffset="50dp"
+     android:paddingBottom="50dp"
+
+     android:handle="@+id/handle"
+     android:content="@+id/content"
+     
+     
+     >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/handle"
+     android:orientation="horizontal"
+     android:layout_width="fill_parent"
+     android:layout_height="30dp"
+     android:background="#456789"
+     >
+     <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:src="@drawable/handle" 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_centerHorizontal="true"
+     />
+     
+</RelativeLayout>
+     
+
+     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/content"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:background="#fcfcf9"
+     android:padding="10dp"
+     >
+     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+     				 android:id="@+id/title"
+     				 android:layout_width="fill_parent"
+     				 android:layout_height="wrap_content"
+     				 android:typeface="serif"
+    				 android:textSize="20dip"
+    				 android:textColor="#456789"  />
+     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+     				 android:id="@+id/description"
+     				 android:layout_width="fill_parent"
+     				 android:layout_height="wrap_content"
+     				 android:typeface="serif"
+    				 android:textSize="16dip"
+    				 android:textColor="#313233"
+    				 android:layout_below="@+id/title"  />
+</RelativeLayout>
+
+
+
+</SlidingDrawer>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="horizontal"
+     android:layout_width="wrap_content"
+     android:layout_height="90dp"
+     android:background="#456789"
+     
+     android:layout_below="@+id/drawer">
+     
+     <SeekBar android:id="@+id/progress" 
+
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content" 
+         android:paddingLeft="8dp" 
+         android:paddingRight="8dp" 
+         android:layout_below="@+id/controllers" 
+         android:progressDrawable="@drawable/seek_background"
+         android:thumb="@drawable/marker"
+          /> 
+        
+        <RelativeLayout android:id="@+id/controllers"
+        		   android:layout_width="wrap_content"
+        		   android:layout_height="wrap_content"
+        		   android:layout_centerHorizontal="true"
+        		   android:orientation="horizontal"
+        		   >
+		<Button
+	        android:id="@+id/stop_playback"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Stop" 
+	        
+	        android:layout_toRightOf="@+id/play_pause"
+	        android:layout_alignTop="@+id/play_pause"
+	        />
+	   <Button
+	        android:id="@+id/play_pause"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Pause"
+	        android:src="@drawable/play_pause" 
+	        android:scaleType="fitCenter"
+	        
+	        />
+	 
+	   </RelativeLayout>
+	 
+</RelativeLayout>
+
+
+</RelativeLayout>
+
+
+	
+
+
+
+</LinearLayout>

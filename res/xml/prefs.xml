@@ -5,8 +5,4 @@
         android:summary="Please provide user name"
         android:title="User Name"
         android:key="username"></EditTextPreference>
-    <EditTextPreference
-        android:summary="Please enter your password"
-        android:title="Password" android:password="true"
-        android:key="password"></EditTextPreference>
 </PreferenceScreen>

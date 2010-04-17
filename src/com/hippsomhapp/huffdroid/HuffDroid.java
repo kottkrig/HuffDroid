@@ -13,11 +13,13 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -43,14 +45,21 @@ public class HuffDroid extends ListActivity implements Runnable {
 	private int[] resumeArray;
 	
 	private Button mPlayPause;
+	private String mUserName;
 	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        progressDialog = ProgressDialog.show(this, "Working...", "Fetching your duffs", true, false);  
-        new Thread(this).start();
+        
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        mUserName = prefs.getString("username", "Nothing has been entered");
+        
+        if (!mUserName.equals("Nothing has been entered")) {
+	        progressDialog = ProgressDialog.show(this, "Working...", "Fetching your duffs", true, false);  
+	        new Thread(this).start();
+        }
     }
     
     private Handler mHandler = new Handler() {
@@ -74,7 +83,7 @@ public class HuffDroid extends ListActivity implements Runnable {
     
     public void run(){
     	Gson gson = new Gson();
-    	Reader r = new InputStreamReader(getJSONData("http://huffduffer.com/kottkrig/json"));
+    	Reader r = new InputStreamReader(getJSONData("http://huffduffer.com/"+mUserName+"/json"));
     	items = gson.fromJson(r, HuffDuffs.class);
     	mHandler.sendEmptyMessage(0);
     }

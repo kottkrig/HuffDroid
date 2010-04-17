@@ -1,7 +1,7 @@
 README for HuffDroid
 ====================
 
-A very primitive (at the moment) huffduffer client for Android.
+A very primitive (at the moment) [huffduffer][1] client for Android.
 
 Current features
 ----------------
@@ -14,3 +14,5 @@ Lacking features
 ----------------
 
 * Everything else
+
+[1]: http://www.huffduffer.com

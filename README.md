@@ -10,8 +10,8 @@ Current features
 * Play a huffduff
 * Look at a description of currently playing huffduff
 	
-Lacking features
-----------------
+Planned future features
+-----------------------
 
 * Everything else
 

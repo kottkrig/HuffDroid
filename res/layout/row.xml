@@ -13,7 +13,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:typeface="serif"
-    android:textSize="20dip"
+    android:textStyle="bold"
+    android:textSize="7pt"
     android:textColor="#456789" 
     
     
@@ -38,6 +39,12 @@
             android:ellipsize="marquee"
             android:textColor="#313233"
             android:typeface="serif"
+            android:textSize="4pt"
+            
+            android:shadowColor="#eee"
+    		android:shadowDx="1.2"
+    		android:shadowDy="1.2"
+    		android:shadowRadius="1.2"
         />
     
     </LinearLayout>

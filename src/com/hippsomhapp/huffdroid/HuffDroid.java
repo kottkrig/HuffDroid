@@ -63,8 +63,8 @@ public class HuffDroid extends ListActivity implements Runnable {
 			HuffAdapter adapter = new HuffAdapter(HuffDroid.this, R.layout.row, items.getItems());
 			HuffDroid.this.setListAdapter(adapter);
 			
-			Button stopPlayback = (Button) findViewById(R.id.stop_playback);
-	        stopPlayback.setOnClickListener(stopClickListener);
+			//Button stopPlayback = (Button) findViewById(R.id.stop_playback);
+	        //stopPlayback.setOnClickListener(stopClickListener);
 	        
 	        mPlayPause = (Button) findViewById(R.id.play_pause);
 	        mPlayPause.setOnClickListener(playPauseListener);

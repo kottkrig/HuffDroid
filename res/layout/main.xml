@@ -14,7 +14,7 @@
  <ListView
     android:id="@+id/android:list"
     android:layout_width="fill_parent"
-    android:layout_height="370dp"
+    android:layout_height="390dp"
     android:background="#fcfcf9"
     android:divider="@drawable/black_white_divider"
     android:dividerHeight="1px"
@@ -27,7 +27,7 @@
  <SlidingDrawer
      android:id="@+id/drawer"
      android:layout_width="fill_parent"
-     android:layout_height="400dp"
+     android:layout_height="430dp"
      android:gravity="bottom"
      android:allowSingleTap="false"
      android:topOffset="50dp"
@@ -88,28 +88,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:orientation="horizontal"
      android:layout_width="wrap_content"
-     android:layout_height="90dp"
+     android:layout_height="60dp"
      android:background="#456789"
      
      android:layout_below="@+id/drawer">
+     
+     <TextView   xmlns:android="http://schemas.android.com/apk/res/android" 	
+     				android:id="@+id/now_playing" 
+     				android:layout_width="fill_parent"
+     				android:layout_height="wrap_content"
+     				android:layout_toRightOf="@+id/play_pause"
+     				android:textColor="#fff" />
+     			
      
      <SeekBar android:id="@+id/progress" 
 
          android:layout_width="fill_parent" 
          android:layout_height="wrap_content" 
-         android:paddingLeft="8dp" 
-         android:paddingRight="8dp" 
-         android:layout_below="@+id/controllers" 
+         android:paddingLeft="10dp" 
+         android:paddingRight="10dp" 
          android:progressDrawable="@drawable/seek_background"
          android:thumb="@drawable/marker"
+         android:layout_toRightOf="@+id/play_pause"
+         android:layout_below="@+id/now_playing"
           /> 
         
-        <RelativeLayout android:id="@+id/controllers"
-        		   android:layout_width="wrap_content"
-        		   android:layout_height="wrap_content"
-        		   android:layout_centerHorizontal="true"
-        		   android:orientation="horizontal"
-        		   >
 	   <Button
 	        android:id="@+id/play_pause"
 	        android:layout_width="wrap_content"
@@ -119,8 +122,6 @@
 	        android:scaleType="fitCenter"
 	        
 	        />
-	 
-	   </RelativeLayout>
 	 
 </RelativeLayout>
 

@@ -19,18 +19,17 @@ public final class R {
         public static final int seek_background=0x7f020005;
     }
     public static final class id {
-        public static final int bottomtext=0x7f07000a;
+        public static final int bottomtext=0x7f070009;
         public static final int content=0x7f070002;
         public static final int controllers=0x7f070006;
         public static final int description=0x7f070004;
         public static final int drawer=0x7f070000;
         public static final int handle=0x7f070001;
-        public static final int play_pause=0x7f070008;
-        public static final int preferences=0x7f07000b;
+        public static final int play_pause=0x7f070007;
+        public static final int preferences=0x7f07000a;
         public static final int progress=0x7f070005;
-        public static final int stop_playback=0x7f070007;
         public static final int title=0x7f070003;
-        public static final int toptext=0x7f070009;
+        public static final int toptext=0x7f070008;
     }
     public static final class layout {
         public static final int main=0x7f030000;
